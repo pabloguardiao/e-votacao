@@ -1,0 +1,8 @@
+/*
+CREATE TABLE eleitor(id INT AUTO_INCREMENT NOT NULL PRIMARY KEY, nome VARCHAR(100) NOT NULL, tipo VARCHAR(1) DEFAULT 'G' NOT NULL, andamento INT DEFAULT 0 NOT NULL);
+CREATE TABLE eleicao(id INT AUTO_INCREMENT NOT NULL PRIMARY KEY, descricao VARCHAR(100) NOT NULL);
+CREATE TABLE chapa(id INT AUTO_INCREMENT PRIMARY KEY, descricao VARCHAR(200), tipo VARCHAR(1) DEFAULT 'G' NOT NULL, selecao VARCHAR(1) DEFAULT 'U' NOT NULL, ordem INT NOT NULL, id_eleicao int not null, FOREIGN KEY (id_eleicao) REFERENCES eleicao(id));
+CREATE TABLE candidato(id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100), foto VARCHAR(100), id_chapa int not null, FOREIGN KEY (id_chapa) REFERENCES chapa(id));
+CREATE TABLE voto(id INT AUTO_INCREMENT PRIMARY KEY, id_candidato INT NOT NULL, id_eleitor INT NOT NULL, opcao VARCHAR(1) NOT NULL, FOREIGN KEY (id_candidato) REFERENCES candidato(id), FOREIGN KEY (id_eleitor) REFERENCES eleitor(id));
+CREATE TABLE voto(id INT AUTO_INCREMENT PRIMARY KEY, id_candidato INT NOT NULL, id_eleitor INT NOT NULL, opcao VARCHAR(1) NOT NULL, FOREIGN KEY (id_candidato) REFERENCES candidato(id), FOREIGN KEY (id_eleitor) REFERENCES eleitor(id));
+*/
